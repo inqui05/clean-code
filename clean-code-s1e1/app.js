@@ -21,19 +21,24 @@ var createNewTaskElement=function(taskString){
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
+    checkBox.classList.add('task-done');
     //label
     var label=document.createElement("label");//label
     //input (text)
     var editInput=document.createElement("input");//text
+    editInput.classList.add('task');
     //button.edit
     var editButton=document.createElement("button");//edit button
+    editButton.classList.add('edit');
 
     //button.delete
     var deleteButton=document.createElement("button");//delete button
+    deleteButton.classList.add('delete');
     var deleteButtonImg=document.createElement("img");//delete button image
+    deleteButtonImg.classList.add('delete-image');
 
     label.innerText=taskString;
-    label.className='task';
+    label.className='task-title';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -92,9 +97,15 @@ var editTask=function(){
         //switch to .edit-mode
         //label becomes the inputs value.
         label.innerText=editInput.value;
+        label.classList.remove('task-title-edit');
+        label.classList.add('task-title');
+        editInput.classList.remove('task-edit');
         editBtn.innerText="Edit";
     }else{
         editInput.value=label.innerText;
+        label.classList.add('task-title-edit');
+        label.classList.remove('task-title');
+        editInput.classList.add('task-edit');
         editBtn.innerText="Save";
     }
 
