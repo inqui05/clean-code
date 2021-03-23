@@ -23,7 +23,7 @@ var createNewTaskElement=function(taskString){
     var checkBox=document.createElement("input");//checkbx
     checkBox.classList.add('task-done');
     //label
-    var label=document.createElement("label");//label
+    var label=document.createElement("p");//label
     //input (text)
     var editInput=document.createElement("input");//text
     editInput.classList.add('task');
@@ -87,8 +87,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector('.task');
+    var label=listItem.querySelector("p");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .edit-mode
@@ -102,6 +102,7 @@ var editTask=function(){
         editInput.classList.remove('task-edit');
         editBtn.innerText="Edit";
     }else{
+        console.log(this.parentNode);
         editInput.value=label.innerText;
         label.classList.add('task-title-edit');
         label.classList.remove('task-title');
