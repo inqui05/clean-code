@@ -28,6 +28,7 @@ var createNewTaskElement = function (taskString) {
     //input (text)
     var editInput = document.createElement("input"); //text
     editInput.classList.add('tasks__fix');
+    editInput.classList.add('tasks_input');
     //button.edit
     var editButton = document.createElement("button"); //edit button
     editButton.classList.add('tasks__edit');

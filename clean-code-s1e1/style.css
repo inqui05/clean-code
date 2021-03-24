@@ -29,6 +29,8 @@ body {
 }
 .tasks__title {
   width: 56%;
+  display: inline-block;
+  margin: 0;
   flex-grow: 1;
 }
 .new-task-container {
@@ -68,7 +70,7 @@ button:hover {
   margin: 0;
   text-transform: uppercase;
 }
-.tasks__fix {
+.tasks_input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
