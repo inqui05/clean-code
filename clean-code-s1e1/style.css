@@ -42,7 +42,8 @@ body {
 .todo-list_title {
   list-style: none;
 }
-input, button{
+input,
+button{
   outline: none;
 }
 button {
