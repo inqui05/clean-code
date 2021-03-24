@@ -10,10 +10,10 @@ body {
   display: block;
   text-align: right;
 }
-.eisenhower-matrix-image {
+.eisenhower-matrix__image {
   width: 100%;
 }
-.more-information {
+.eisenhower-matrix__information {
   font-family: fantasy, cursive;
 }
 
