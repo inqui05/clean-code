@@ -22,21 +22,24 @@ body {
     text-align: center;
   }
 }
-.new-task {
+.todo-list {
   display: block;
-  width: 400px;
+  width: 500px;
   margin: 0 auto 0;
 }
-.task-title {
+.tasks__title {
   width: 56%;
-  display: inline-block;
+  flex-grow: 1;
 }
-ul {
+.new-task-container {
+  display: flex;
+}
+.tasks {
   margin: 0;
   padding: 0px;
 }
-li,
-h3 {
+.tasks__item,
+.todo-list_title {
   list-style: none;
 }
 input, button{
@@ -55,8 +58,7 @@ button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-.new-task-title {
+.todo-list_title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -65,7 +67,7 @@ h3,
   margin: 0;
   text-transform: uppercase;
 }
-.task {
+.tasks__fix {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -77,72 +79,79 @@ h3,
   font-family: Lato, sans-serif;
   color: #888;
 }
-.task:focus {
+.tasks:focus {
   color: #333;
 }
 
 /* New Task */
-.new-task-title {
+.new-task__title {
   display: block;
   margin: 0 0 20px;
 }
-#new-task-input {
+.new-task__input {
   width: 318px;
+  flex-grow: 1;
 }
-.new-task-button:hover {
+.new-task__button:hover {
   color: #0fc57c;
 }
 
 /* Task list */
-li {
+.tasks__item {
+  display: flex;
   overflow: hidden;
+  width: 500px;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-li > * {
+.tasks__item {
   vertical-align: middle;
 }
 
-.task-done {
+.tasks__done {
   margin: 0 10px;
 }
-.task-title {
+.tasks__title {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.task {
+.tasks {
   width: 226px;
 }
-.delete:hover {
+.tasks__delete:hover {
   color: #cf2323;
 }
-.delete-image {
+.tasks__delete-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete-image:hover {
+.tasks__delete-image:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks p {
+.tasks__title_line-through {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task {
+.tasks__fix {
   display: none;
 }
 
-.task-edit {
+.tasks__fix_visible {
   display: inline-block;
   width: 224px;
+  flex-grow: 1;
 }
 
-.task-title-edit {
+.tasks__title_invisible {
   display: none;
 }
